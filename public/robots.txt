@@ -1,0 +1,3 @@
+User-agent: *
+
+Sitemap: //:1313/sitemap.xml
