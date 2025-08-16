@@ -2,10 +2,9 @@
 title: Publications
 cms_exclude: true
 
-# View.
-view: citation
+# 使用compact视图，不会裁剪图片
+view: card
 
-# Optional header image (relative to `static/media/` folder).
 banner:
   caption: ''
   image: ''

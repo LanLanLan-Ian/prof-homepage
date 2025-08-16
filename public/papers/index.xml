@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Papers | Hugo Academic CV Theme</title>
+    <link>//:1313/papers/</link>
+      <atom:link href="//:1313/papers/index.xml" rel="self" type="application/rss+xml" />
+    <description>Papers</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language>
+    <image>
+      <url>//:1313/media/icon_hu_645fa481986063ef.png</url>
+      <title>Papers</title>
+      <link>//:1313/papers/</link>
+    </image>
+    
+    <item>
+      <title>Papers</title>
+      <link>//:1313/papers/papers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//:1313/papers/papers/</guid>
+      <description>$$Jiawei Zhou is a great Professor.$$</description>
+    </item>
+    
+  </channel>
+</rss>

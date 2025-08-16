@@ -1,0 +1,31 @@
+<style>
+/* 让所有markdown区块左对齐并减少留白 */
+.blox-markdown {
+  text-align: left !important;
+  max-width: 90% !important;
+  margin: 0 auto !important;
+}
+
+/* 让markdown区块的标题左对齐 */
+.blox-markdown h1,
+.blox-markdown h2,
+.blox-markdown h3 {
+  text-align: left !important;
+}
+
+/* 让内容区域左对齐 */
+.blox-markdown .prose,
+.blox-markdown div {
+  text-align: left !important;
+  max-width: none !important;
+}
+
+/* 只影响markdown区块内的标题，不影响个人资料 */
+.blox-markdown .text-3xl {
+  text-align: left !important;
+}
+
+/* 删除这两行，它们影响了整个网站的标题 */
+/* .mb-6.text-3xl.font-bold { text-align: left !important; } */
+/* .text-3xl { text-align: left !important; } */
+</style>

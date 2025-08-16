@@ -1,0 +1,18 @@
+/* 让markdown区块的内容左对齐并加宽 */
+.blox-markdown {
+  text-align: left !important;
+  max-width: 90% !important;
+  margin: 0 auto !important;
+}
+
+/* 让标题左对齐 */
+.blox-markdown h1,
+.blox-markdown h2,
+.blox-markdown h3 {
+  text-align: left !important;
+}
+
+/* 减少整体的侧边距 */
+.container {
+  max-width: 1200px !important;
+}
