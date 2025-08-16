@@ -5,7 +5,7 @@
     <link>//:1313/publication/</link>
       <atom:link href="//:1313/publication/index.xml" rel="self" type="application/rss+xml" />
     <description>Publications</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Tue, 01 Jul 2025 00:00:00 +0000</lastBuildDate>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Fri, 01 Jul 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>//:1313/media/icon_hu_645fa481986063ef.png</url>
       <title>Publications</title>
@@ -13,14 +13,19 @@
     </image>
     
     <item>
-      <title>Conditional Dichotomy Quantification via Geometric Embedding</title>
-      <link>//:1313/publication/conditional-dichotomy-quantification-via-geometric-embedding/</link>
-      <pubDate>Tue, 01 Jul 2025 00:00:00 +0000</pubDate>
-      <guid>//:1313/publication/conditional-dichotomy-quantification-via-geometric-embedding/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Authors:&lt;/strong&gt; Shaobo Cui, Wenqing Liu, Yiyang Feng, Jiawei Zhou, Boi Faltings&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Conference:&lt;/strong&gt; ACL 2025&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Abstract:&lt;/strong&gt; Conditional dichotomy, the contrast between two outputs conditioned on the same context, is vital for applications such as debate, defeasible inference, and causal reasoning. Existing methods that rely on semantic similarity often fail to capture the nuanced oppositional dynamics essential for these applications&amp;hellip;&lt;/p&gt;
-</description>
+      <title>Online Semantic Parsing for Latency Reduction in Task-Oriented Dialogue</title>
+      <link>//:1313/publication/online-semantic-parsing-for-latency-reduction-in-task-oriented-dialogue/</link>
+      <pubDate>Fri, 01 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>//:1313/publication/online-semantic-parsing-for-latency-reduction-in-task-oriented-dialogue/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Structure-aware Fine-tuning of Sequence-to-sequence Transformers for Transition-based AMR Parsing</title>
+      <link>//:1313/publication/structure-aware-fine-tuning-of-sequence-to-sequence-transformers-for-transition-based-amr-parsing/</link>
+      <pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate>
+      <guid>//:1313/publication/structure-aware-fine-tuning-of-sequence-to-sequence-transformers-for-transition-based-amr-parsing/</guid>
+      <description></description>
     </item>
     
   </channel>

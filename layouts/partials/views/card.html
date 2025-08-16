@@ -1,0 +1,99 @@
+{{ $item := .item }}
+
+{{ $link := "" }}
+{{ $target := "" }}
+{{ if $item.Params.url_pdf }}
+  {{ $link = $item.Params.url_pdf }}
+  {{ $target = "target=\"_blank\" rel=\"noopener\"" }}
+{{ else }}
+  {{ $link = $item.RelPermalink }}
+{{ end }}
+
+{{ $resource := partial "functions/get_featured_image.html" $item }}
+{{ $anchor := $item.Params.image.focal_point | default "Center" }}
+
+<div class="mb-6">
+  <div class="flex items-start gap-4">
+    <!-- Left: Publication Image -->
+    <div class="flex-shrink-0">
+      {{ with $resource }}
+        {{ $image := .Fit "400x300" }}
+        {{ if ne $image.MediaType.SubType "gif" }}{{ $image = $image.Process "webp" }}{{ end }}
+        <img class="w-[400px] h-[300px] object-cover rounded" loading="lazy" src="{{ $image.RelPermalink }}" height="{{ $image.Height }}" width="{{ $image.Width }}" alt="{{ $item.Title | plainify }}">
+      {{ else }}
+        <!-- Placeholder if no image -->
+        <div class="w-[400px] h-[300px] bg-gray-100 dark:bg-gray-800 rounded flex items-center justify-content-center">
+          <svg class="w-12 h-12 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clip-rule="evenodd"></path>
+          </svg>
+        </div>
+      {{ end }}
+    </div>
+    
+    <!-- Right: Publication Details -->
+    <div class="flex-grow min-w-0">
+      
+      <!-- Title with Link -->
+      <h4 class="mb-2">
+        <a href="{{ $link }}" {{ $target | safeHTMLAttr }} class="text-red-600 dark:text-red-400 hover:text-red-800 dark:hover:text-red-300 no-underline hover:underline font-semibold text-lg leading-tight">
+          {{ $item.Title }}
+        </a>
+      </h4>
+      
+      <!-- Authors -->
+      {{ if $item.Params.authors }}
+      <div class="mb-2">
+        <span class="text-gray-600 dark:text-gray-400 text-base">
+          {{ range $i, $author := $item.Params.authors }}
+            {{ if $i }}, {{ end }}{{ $author }}
+          {{ end }}
+        </span>
+      </div>
+      {{ end }}
+      
+      <!-- Publication Venue -->
+      {{ if $item.Params.publication }}
+      <div class="mb-2">
+        <span class="font-bold text-gray-900 dark:text-gray-100">{{ $item.Params.publication }}</span>
+      </div>
+      {{ end }}
+      
+      <!-- Awards -->
+      {{ if $item.Params.awards }}
+      <div class="mb-3">
+        {{ range $item.Params.awards }}
+        <span class="inline-block bg-red-600 text-white px-2 py-1 text-sm rounded mr-2">{{ . }}</span>
+        {{ end }}
+      </div>
+      {{ end }}
+      
+      <!-- Links -->
+      <div class="flex flex-wrap gap-2">
+        {{ if $item.Params.url_code }}
+        <a href="{{ $item.Params.url_code }}" target="_blank" class="inline-block bg-transparent border border-red-600 text-red-600 hover:bg-red-600 hover:text-white px-3 py-1 text-sm rounded transition-colors">
+          [Code]
+        </a>
+        {{ end }}
+        
+        {{ if $item.Params.url_pdf }}
+        <a href="{{ $item.Params.url_pdf }}" target="_blank" class="inline-block bg-transparent border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-3 py-1 text-sm rounded transition-colors">
+          [PDF]
+        </a>
+        {{ end }}
+        
+        {{ if $item.Params.url_slides }}
+        <a href="{{ $item.Params.url_slides }}" target="_blank" class="inline-block bg-transparent border border-green-600 text-green-600 hover:bg-green-600 hover:text-white px-3 py-1 text-sm rounded transition-colors">
+          [Slides]
+        </a>
+        {{ end }}
+        
+        {{ if $item.Params.url_project }}
+        <a href="{{ $item.Params.url_project }}" target="_blank" class="inline-block bg-transparent border border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white px-3 py-1 text-sm rounded transition-colors">
+          [Project]
+        </a>
+        {{ end }}
+      </div>
+      
+    </div>
+  </div>
+</div>
