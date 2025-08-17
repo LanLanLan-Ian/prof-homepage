@@ -1,6 +1,6 @@
 <!doctype html>
 <!-- This site was created with Hugo Blox. https://hugoblox.com -->
-<!-- Last Published: August 16, 2025 --><html lang="en-us" dir="ltr"
+<!-- Last Published: August 17, 2025 --><html lang="en-us" dir="ltr"
       data-wc-theme-default="system">
   
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
@@ -313,6 +313,27 @@
       
     
   
+  
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+  
     
       
       
@@ -424,30 +445,6 @@
       
     
   
-  
-  
-  
-  
-  
-    
-      
-      
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        
-        
-      
-    
   
   
   
@@ -692,48 +689,6 @@
         <a
           class="nav-link "
           
-          href="/talks/"
-        >Talks</a
-        >
-      </li>
-      
-      
-      
-      
-      
-      
-      <li class="nav-item">
-        <a
-          class="nav-link "
-          
-          href="/news/"
-        >News</a
-        >
-      </li>
-      
-      
-      
-      
-      
-      
-      <li class="nav-item">
-        <a
-          class="nav-link "
-          
-          href="/experience/"
-        >Experience</a
-        >
-      </li>
-      
-      
-      
-      
-      
-      
-      <li class="nav-item">
-        <a
-          class="nav-link "
-          
           href="/projects/"
         >Projects</a
         >
@@ -936,6 +891,70 @@
 
 
 
+
+  
+    
+      
+      <script>
+document.addEventListener('DOMContentLoaded', function() {
+  
+  if (!window.location.pathname.includes('/publication')) return;
+  
+  console.log('Filter script loaded');
+  
+  
+  const cards = document.querySelectorAll('.publication-card');
+  const categories = new Set();
+  
+  cards.forEach(card => {
+    const cardCategories = card.dataset.categories;
+    console.log('Card categories:', cardCategories);
+    if (cardCategories && cardCategories.trim()) {
+      cardCategories.split(',').forEach(cat => {
+        const trimmedCat = cat.trim();
+        if (trimmedCat) {
+          categories.add(trimmedCat);
+          console.log('Added category:', trimmedCat);
+        }
+      });
+    }
+  });
+  
+  console.log('All categories found:', Array.from(categories));
+  
+  
+  const select = document.getElementById('category-filter');
+  if (select) {
+    categories.forEach(category => {
+      const option = document.createElement('option');
+      option.value = category;
+      option.textContent = category;
+      select.appendChild(option);
+    });
+  }
+  
+  
+  if (select) {
+    select.addEventListener('change', function() {
+      const selectedCategory = this.value;
+      console.log('Selected category:', selectedCategory);
+      
+      
+      cards.forEach(card => {
+        const cardCategories = card.dataset.categories;
+        if (selectedCategory === 'all' || (cardCategories && cardCategories.includes(selectedCategory))) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  }
+});
+</script>
+      
+    
+  
 
 
 

@@ -14,6 +14,8 @@ date: "2021-07-01"
 publication_types: ["paper-conference"]
 publication: "EMNLP 2021: the 2021 Conference on Empirical Methods in Natural Language Processing "
 
+categories: ["RAG", "LLM"]
+
 # paper link and code link
 url_pdf: "https://aclanthology.org/2021.emnlp-main.507/"
 url_code: "https://github.com/IBM/transition-amr-parser"

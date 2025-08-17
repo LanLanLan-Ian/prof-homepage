@@ -12,7 +12,7 @@ authors:
 date: "2022-07-01"
 publication_types: ["paper-conference"]
 publication: "ACL 2022: the 60th Annual Meeting of the Association for Computational Linguistics "
-
+categories: ["Inference Efficiency", "LLM"]
 # paper link and code link
 url_pdf: "https://aclanthology.org/2022.acl-long.110/"
 url_code: "https://github.com/microsoft/online-semantic-parsing-for-latency-reduction"
