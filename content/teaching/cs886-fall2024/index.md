@@ -1,7 +1,7 @@
 ---
 title: "CS 886: Topics in Language Models (Fall 24)"
 date: 2024-09-01
-type: docs
+type: page
 
 # Course metadata
 instructor: "Jiawei Zhou"
