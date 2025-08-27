@@ -53,8 +53,29 @@ locale:
   time_format: '3:04 PM'
 
 # Site features
+#features:
+#  math:
+#    enable: false
+#  privacy_pack:
+#    enable: false
+
+# Site features
 features:
   math:
     enable: false
   privacy_pack:
     enable: false
+  comment:
+    provider: giscus
+    giscus:
+      repo: LanLanLan-Ian/prof-homepage
+      repo_id: R_kgDOPeRAQg
+      category: General
+      category_id: DIC_kwDOPeRAQs4CuqE
+      mapping: pathname
+      reactions_enabled: true
+      emit_metadata: false
+      input_position: bottom
+      theme: preferred_color_scheme
+      lang: en
+      loading: lazy

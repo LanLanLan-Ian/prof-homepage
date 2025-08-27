@@ -1,0 +1,101 @@
+{{ define "main" }}
+
+<div class="container mx-auto max-w-4xl px-4 py-8">
+  
+  <!-- Blog Post Header -->
+  <header class="mb-8">
+    <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+      {{ .Title }}
+    </h1>
+    
+    <div class="flex items-center text-gray-600 dark:text-gray-400 text-sm mb-6">
+      <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}" class="mr-4">
+        {{ .Date.Format "January 2, 2006" }}
+      </time>
+      
+      {{ if .Params.reading_time }}
+      <span class="mr-4">{{ .ReadingTime }} min read</span>
+      {{ end }}
+      
+      {{ if .Params.tags }}
+      <div class="flex flex-wrap gap-2">
+        {{ range .Params.tags }}
+        <span class="px-2 py-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 text-xs rounded-full">
+          {{ . }}
+        </span>
+        {{ end }}
+      </div>
+      {{ end }}
+    </div>
+  </header>
+
+  <!-- Featured Image -->
+  {{ if .Params.image }}
+  <div class="mb-8">
+    {{ $resource := .Resources.GetMatch .Params.image }}
+    {{ if $resource }}
+      {{ $image := $resource.Resize "800x400" }}
+      <img src="{{ $image.RelPermalink }}" 
+           alt="{{ .Params.image_alt | default .Title }}" 
+           class="w-full h-64 object-cover rounded-lg shadow-lg">
+    {{ end }}
+  </div>
+  {{ end }}
+
+  <!-- Blog Content -->
+  <article class="prose prose-lg dark:prose-invert max-w-none mb-12">
+    {{ .Content }}
+  </article>
+
+  <!-- Tags Section -->
+  {{ if .Params.tags }}
+  <div class="mb-8">
+    <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">Tags</h3>
+    <div class="flex flex-wrap gap-2">
+      {{ range .Params.tags }}
+      <a href="{{ "/tags/" | relURL }}{{ . | urlize }}" 
+         class="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-sm rounded-full hover:bg-red-100 dark:hover:bg-red-900 hover:text-red-800 dark:hover:text-red-200 transition-colors">
+        #{{ . }}
+      </a>
+      {{ end }}
+    </div>
+  </div>
+  {{ end }}
+
+  <!-- Navigation -->
+  <nav class="flex justify-between items-center py-8 border-t border-gray-200 dark:border-gray-700">
+    {{ with .PrevInSection }}
+    <a href="{{ .RelPermalink }}" class="flex items-center text-red-600 dark:text-red-400 hover:text-red-800 dark:hover:text-red-300">
+      <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+      </svg>
+      <div>
+        <div class="text-sm text-gray-500 dark:text-gray-400">Previous</div>
+        <div class="font-medium">{{ .Title | truncate 40 }}</div>
+      </div>
+    </a>
+    {{ else }}
+    <div></div>
+    {{ end }}
+
+    {{ with .NextInSection }}
+    <a href="{{ .RelPermalink }}" class="flex items-center text-right text-red-600 dark:text-red-400 hover:text-red-800 dark:hover:text-red-300">
+      <div>
+        <div class="text-sm text-gray-500 dark:text-gray-400">Next</div>
+        <div class="font-medium">{{ .Title | truncate 40 }}</div>
+      </div>
+      <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+      </svg>
+    </a>
+    {{ end }}
+  </nav>
+
+  <!-- Comments Section -->
+  {{ if site.Params.features.comment.provider }}
+    {{ partial "comments/giscus.html" . }}
+  {{ end }}
+
+</div>
+
+{{ end }}

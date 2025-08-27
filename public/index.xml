@@ -135,6 +135,51 @@
     </item>
     
     <item>
+      <title>Welcome to My Blog</title>
+      <link>//:1313/blog/firstblog/</link>
+      <pubDate>Wed, 28 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>//:1313/blog/firstblog/</guid>
+      <description>&lt;h2 id=&#34;hello-and-welcome&#34;&gt;Hello and Welcome!&lt;/h2&gt;
+&lt;p&gt;I&amp;rsquo;m excited to launch this blog as a space to share my thoughts on research, teaching, and the rapidly evolving field of artificial intelligence, particularly language models.&lt;/p&gt;
+&lt;h3 id=&#34;what-you-can-expect&#34;&gt;What You Can Expect&lt;/h3&gt;
+&lt;p&gt;In this blog, I plan to write about:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Research Insights&lt;/strong&gt;: Deep dives into recent papers and developments in AI/ML&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Teaching Experiences&lt;/strong&gt;: Reflections from the classroom and pedagogy in computer science&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Technical Tutorials&lt;/strong&gt;: Practical guides and code examples&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Academic Life&lt;/strong&gt;: The ups and downs of research and academia&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;recent-interests&#34;&gt;Recent Interests&lt;/h3&gt;
+&lt;p&gt;My current research focuses on:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Language Model Architectures&lt;/strong&gt;: Understanding transformer variants and their capabilities&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Training Methodologies&lt;/strong&gt;: Exploring efficient training techniques and fine-tuning strategies&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Evaluation Frameworks&lt;/strong&gt;: Developing better ways to assess model performance&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Practical Applications&lt;/strong&gt;: Bridging the gap between research and real-world deployment&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;interactive-discussions&#34;&gt;Interactive Discussions&lt;/h3&gt;
+&lt;p&gt;One of the exciting features of this blog is the comment system powered by GitHub Discussions. This means:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You can engage directly with the content&lt;/li&gt;
+&lt;li&gt;Share your own insights and experiences&lt;/li&gt;
+&lt;li&gt;Ask questions and get responses&lt;/li&gt;
+&lt;li&gt;Build a community around shared interests&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;getting-started&#34;&gt;Getting Started&lt;/h3&gt;
+&lt;p&gt;Feel free to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Browse through posts by topic or date&lt;/li&gt;
+&lt;li&gt;Leave comments and start discussions&lt;/li&gt;
+&lt;li&gt;Share posts that interest you&lt;/li&gt;
+&lt;li&gt;Suggest topics you&amp;rsquo;d like me to cover&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I&amp;rsquo;m looking forward to building a vibrant community of researchers, students, and practitioners interested in AI and language models.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;What topics are you most interested in reading about? Let me know in the comments below!&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Projects</title>
       <link>//:1313/projects/</link>
       <pubDate>Sun, 19 May 2024 00:00:00 +0000</pubDate>
@@ -379,7 +424,7 @@
 
 
 
-&lt;div id=&#34;chart-681275943&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-915483762&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   async function fetchChartJSON() {
     console.debug(&#39;Hugo Blox fetching chart JSON...&#39;)
@@ -397,7 +442,7 @@
 
       fetchChartJSON().then(chart =&gt; {
         console.debug(&#39;Plotting chart...&#39;)
-        window.Plotly.newPlot(&#39;chart-681275943&#39;, chart.data, chart.layout, {responsive: true});
+        window.Plotly.newPlot(&#39;chart-915483762&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
